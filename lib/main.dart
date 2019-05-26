@@ -26,15 +26,15 @@ class Homepage extends StatelessWidget {
       height: 200,
       
       child: Carousel(
-        boxFit: BoxFit.cover,
+        boxFit: BoxFit.fitHeight,
         images: [
-          AssetImage('1.jpg'),
-          AssetImage('2.jpg'),
-          AssetImage('3.jpg'),
-          AssetImage('4.jpg'),
-          AssetImage('5.jpg'),
-          AssetImage('6.jpg'),
-          AssetImage('7.jpg'),
+          AssetImage('images/1.jpg'),
+          AssetImage('images/2.jpg'),
+          AssetImage('images/3.jpg'),
+          AssetImage('images/4.jpg'),
+          AssetImage('images/5.jpg'),
+          AssetImage('images/6.jpg'),
+          AssetImage('images/7.jpg'),
           
         ],
         autoplay: false,
