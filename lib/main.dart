@@ -1,5 +1,7 @@
+import 'package:ecommerce/components/products.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
+import './components/horizontal_view.dart';
 
 void  main() => runApp(MyApp());
 
@@ -26,21 +28,24 @@ class Homepage extends StatelessWidget {
       height: 200,
       
       child: Carousel(
-        boxFit: BoxFit.fitHeight,
+        boxFit: BoxFit.cover,
         images: [
           AssetImage('images/1.jpg'),
-          AssetImage('images/2.jpg'),
+          AssetImage('images/2.jpeg'),
           AssetImage('images/3.jpg'),
-          AssetImage('images/4.jpg'),
-          AssetImage('images/5.jpg'),
-          AssetImage('images/6.jpg'),
-          AssetImage('images/7.jpg'),
+          AssetImage('images/4.jpeg'),
+          AssetImage('images/5.jpeg'),
+          AssetImage('images/6.jpeg'),
           
         ],
-        autoplay: false,
+        autoplay: true,
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: Duration(milliseconds: 1000),
         dotSize: 4,
+        indicatorBgPadding: 4,
+        showIndicator: false,
+        overlayShadow: true,
+        overlayShadowSize: 0.12,
       ),
     );
     return Scaffold(
@@ -127,8 +132,21 @@ class Homepage extends StatelessWidget {
         ],
       ),
       body: ListView(
+        scrollDirection: Axis.vertical,
         children: <Widget>[
-          imageCarousel
+          imageCarousel,
+          Padding(
+            padding: EdgeInsets.all(4),
+            child: Text("Categories", 
+            style:TextStyle( fontSize: 18) 
+            ),
+          ),
+          HorizontalList(),
+          Padding(
+            padding: const EdgeInsets.all(5),
+            child: Text("Recent Products", style: TextStyle(fontSize: 19)),
+          ),
+          // Flexible(child: Products())
         ],
       )
       
