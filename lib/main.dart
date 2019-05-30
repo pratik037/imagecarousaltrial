@@ -124,7 +124,7 @@ class Homepage extends StatelessWidget {
       ),
       appBar: AppBar(
         backgroundColor: Colors.red,
-        title: Text("Myntra"),
+        title: Text("Fashion"),
         centerTitle: true,
         actions: <Widget>[
            IconButton(icon: Icon(Icons.search), onPressed: (){},),
@@ -146,7 +146,7 @@ class Homepage extends StatelessWidget {
             padding: const EdgeInsets.all(5),
             child: Text("Recent Products", style: TextStyle(fontSize: 19)),
           ),
-          // Flexible(child: Products())
+          Products()
         ],
       )
       

@@ -20,14 +20,14 @@ class _ProductsState extends State<Products> {
       "price": 50,
     },
     {
-      "name": "Blazer",
-      "picture": "images/products/blazer1.jpeg",
+      "name": "Pants",
+      "picture": "images/products/pants2.jpeg",
       "old_price": 120,
       "price": 85,
     },
     {
-      "name": "Red Dress",
-      "picture": "images/products/dress1.jpeg",
+      "name": "Black Dress",
+      "picture": "images/products/dress2.jpeg",
       "old_price": 100,
       "price": 50,
     },
@@ -59,7 +59,10 @@ class _ProductsState extends State<Products> {
   ];
   @override
   Widget build(BuildContext context) {
-    return GridView.builder(
+    return  
+    GridView.builder(
+      shrinkWrap: true,
+      physics: ScrollPhysics(),
       itemCount: productList.length,
       gridDelegate:
           SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
